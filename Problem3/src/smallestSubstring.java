@@ -14,7 +14,7 @@ public class smallestSubstring {
 		int charCount=0; //the count of the alphabetic characters we have found
 		boolean allLettersFound=false; //have we found all letters from the alphabet
 		
-		chars = str.toCharArray();
+		chars = str.toLowerCase().toCharArray();
 		
 		for (int i = 0; i < chars.length; i++) {
 			for (int k = i; k < chars.length; k++) {
@@ -36,7 +36,7 @@ public class smallestSubstring {
 					countOfCharacter[i][b - 97]++;
 					/* we start checking if we have all characters from the alphabet after the 26-th character we've got.  */
 					if(charCount>=26){
-						for(int j=0; j<25; j++){
+						for(int j=0; j<26; j++){
 							if(countOfCharacter[i][j]>0){
 								allLettersFound=true;
 							}else{
@@ -73,6 +73,7 @@ public class smallestSubstring {
 			 * starts looping from the begin of the smallest substring until its
 			 * end.
 			 */
+			chars=str.toCharArray();
 			for (int i = stringStart.get(indexOfMin); p <= stringLength
 					.get(indexOfMin); i++, p++) {
 				System.out.print(chars[i]);
