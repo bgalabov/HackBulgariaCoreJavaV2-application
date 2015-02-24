@@ -15,7 +15,8 @@ public class DirectoryManager {
 	 and then we check if there is a value in the HashMap corresponding on the
 	 calculated checksum (the checksum is the key) and if there is, we ignore this file.
 	 If the checksum is unique for the hashmap, we put a record in the hashmap and the file name
-	 in the ArrayList which is returned by the listDuplicatingFiles(dir) method.*/
+	 in the ArrayList which is returned by the listDuplicatingFiles(dir) method.
+	 There is a test directory - ".\\aaab" .*/
 	 
 	public static ArrayList<String> listDuplicatingFiles(File dir){
 		File folder=new File(dir.toString());
